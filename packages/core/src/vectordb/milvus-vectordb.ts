@@ -715,6 +715,32 @@ export class MilvusVectorDatabase implements VectorDatabase {
     }
 
     /**
+     * Flush collection data to ensure persistence
+     * Forces Milvus to persist buffered data from memory to disk.
+     * This ensures that num_entities reflects all inserted data immediately.
+     */
+    async flush(collectionName: string): Promise<void> {
+        await this.ensureInitialized();
+
+        if (!this.client) {
+            throw new Error('MilvusClient is not initialized');
+        }
+
+        console.log(`[MilvusDB] 💾 Flushing collection: ${collectionName}...`);
+
+        try {
+            await this.client.flush({
+                collection_names: [collectionName]
+            });
+
+            console.log(`[MilvusDB] ✅ Collection flushed successfully: ${collectionName}`);
+        } catch (error) {
+            console.error(`[MilvusDB] ❌ Failed to flush collection '${collectionName}':`, error);
+            throw error;
+        }
+    }
+
+    /**
      * Wrapper method to handle collection creation with limit detection for gRPC client
      * Returns true if collection can be created, false if limit exceeded
      */

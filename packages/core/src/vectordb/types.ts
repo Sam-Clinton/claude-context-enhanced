@@ -127,6 +127,14 @@ export interface VectorDatabase {
     query(collectionName: string, filter: string, outputFields: string[], limit?: number): Promise<Record<string, any>[]>;
 
     /**
+     * Flush collection data to ensure persistence
+     * Forces Milvus to persist buffered data from memory to disk.
+     * This ensures that num_entities reflects all inserted data immediately.
+     * @param collectionName Collection name
+     */
+    flush(collectionName: string): Promise<void>;
+
+    /**
      * Check collection limit
      * Returns true if collection can be created, false if limit exceeded
      */

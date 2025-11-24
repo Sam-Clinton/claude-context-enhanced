@@ -788,6 +788,29 @@ export class MilvusRestfulVectorDatabase implements VectorDatabase {
     }
 
     /**
+     * Flush collection data to ensure persistence
+     * Forces Milvus to persist buffered data from memory to disk.
+     * This ensures that num_entities reflects all inserted data immediately.
+     */
+    async flush(collectionName: string): Promise<void> {
+        await this.ensureInitialized();
+
+        console.log(`[MilvusRestfulDB] 💾 Flushing collection: ${collectionName}...`);
+
+        try {
+            await this.makeRequest('/vector/flush', 'POST', {
+                collectionName: collectionName,
+                dbName: this.config.database
+            });
+
+            console.log(`[MilvusRestfulDB] ✅ Collection flushed successfully: ${collectionName}`);
+        } catch (error) {
+            console.error(`[MilvusRestfulDB] ❌ Failed to flush collection:`, error);
+            throw error;
+        }
+    }
+
+    /**
      * Check collection limit
      * Returns true if collection can be created, false if limit exceeded
      * TODO: Implement proper collection limit checking for REST API
