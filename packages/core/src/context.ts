@@ -43,27 +43,81 @@ const DEFAULT_IGNORE_PATTERNS = [
     'coverage/**',
     '.nyc_output/**',
 
+    // Package manager dependencies
+    'vendor/**',           // Ruby, PHP, Go
+    'venv/**',            // Python virtual environment
+    '.venv/**',           // Python virtual environment (hidden)
+    'env/**',             // Python virtual environment
+    'bower_components/**', // Bower
+    'Pods/**',            // iOS CocoaPods
+    '.bundle/**',         // Ruby Bundler
+    'jspm_packages/**',   // JSPM
+    '.pnpm-store/**',     // pnpm
+    '.yarn/**',           // Yarn v2+
+
+    // Modern frontend framework build outputs
+    '.next/**',           // Next.js
+    '.nuxt/**',           // Nuxt.js
+    '.astro/**',          // Astro
+    '.vitepress/**',      // VitePress
+    '.docusaurus/**',     // Docusaurus
+    '.remix/**',          // Remix
+    '.svelte-kit/**',     // SvelteKit
+    '.angular/**',        // Angular
+    '.turbo/**',          // Turborepo cache
+    '.parcel-cache/**',   // Parcel
+    '.expo/**',           // Expo/React Native
+    'storybook-static/**', // Storybook build
+
+    // Backend/Language-specific build outputs
+    '.gradle/**',         // Gradle (Java)
+    'bin/**',             // .NET, Go binaries
+    'obj/**',             // .NET object files
+    '*.egg-info/**',      // Python package metadata
+    '*.pyc',              // Python compiled bytecode
+    '*.pyo',              // Python optimized bytecode
+
+    // Build tool caches
+    '.webpack/**',        // Webpack cache
+    '.vite/**',           // Vite cache
+    '.tsbuildinfo',       // TypeScript build info
+
     // IDE and editor files
     '.vscode/**',
     '.idea/**',
     '*.swp',
     '*.swo',
+    '*.iml',              // IntelliJ
+    '.project',           // Eclipse
+    '.classpath',         // Eclipse
+    '.DS_Store',          // macOS
 
     // Version control
     '.git/**',
     '.svn/**',
     '.hg/**',
+    '.bzr/**',            // Bazaar
 
     // Cache directories
     '.cache/**',
     '__pycache__/**',
     '.pytest_cache/**',
 
+    // Testing outputs
+    'htmlcov/**',         // Python coverage HTML
+    '.coverage',          // Python coverage data
+    'test-results/**',    // Playwright
+    'playwright-report/**', // Playwright
+    'cypress/videos/**',  // Cypress
+    'cypress/screenshots/**', // Cypress
+
     // Logs and temporary files
     'logs/**',
     'tmp/**',
     'temp/**',
     '*.log',
+    '*.tmp',
+    '*.temp',
 
     // Environment and config files
     '.env',
@@ -80,10 +134,99 @@ const DEFAULT_IGNORE_PATTERNS = [
     '*.vendor.js',
     '*.polyfills.js',
     '*.runtime.js',
-    '*.map', // source map files
+    '*.map',              // Source map files
+
+    // Binary files
+    '*.exe',
+    '*.dll',
+    '*.so',
+    '*.dylib',
+    '*.bin',
+    '*.dat',
+    '*.class',            // Java compiled
+    '*.jar',              // Java archive
+    '*.war',              // Java web archive
+
+    // Media files
+    '*.jpg',
+    '*.jpeg',
+    '*.png',
+    '*.gif',
+    '*.ico',
+    '*.svg',
+    '*.mp4',
+    '*.mp3',
+    '*.mov',
+    '*.avi',
+    '*.pdf',
+    '*.doc',
+    '*.docx',
+    '*.ppt',
+    '*.pptx',
+    '*.xls',
+    '*.xlsx',
+
+    // Database files
+    '*.db',
+    '*.sqlite',
+    '*.sqlite3',
+    '*.mdb',
+    '*.accdb',
+
+    // Archive files
+    '*.zip',
+    '*.tar',
+    '*.gz',
+    '*.rar',
+    '*.7z',
+    '*.bz2',
+
+    // Lock files (optional - these can be useful for dependency info)
+    'yarn.lock',
+    'Gemfile.lock',
+    'poetry.lock',
+    'composer.lock',
+    'Pipfile.lock',
+    'pnpm-lock.yaml',
+    'go.sum',
+
+    // OS-specific files
+    'Thumbs.db',          // Windows
+    'desktop.ini',        // Windows
+    '.Spotlight-V100',    // macOS
+    '.Trashes',           // macOS
+
+    // Infrastructure/DevOps
+    '.terraform/**',      // Terraform
+    '*.tfstate',          // Terraform state
+    '*.tfstate.backup',   // Terraform state backup
+    '.dockerignore',      // Docker
+
+    // Documentation builds
+    '_site/**',           // Jekyll
+    'site/**',            // MkDocs
+    'book/**',            // mdBook
+    'docs/_build/**',     // Sphinx
+
+    // Language-specific caches and artifacts
+    '.cargo/**',          // Rust
+    '.stack-work/**',     // Haskell
+    '_build/**',          // Elixir
+    '.elixir_ls/**',      // Elixir Language Server
+    '.dart_tool/**',      // Dart
+    '.pub-cache/**',      // Dart
+    'zig-cache/**',       // Zig
+    'zig-out/**',         // Zig
+
+    // Monorepo tools
+    '.nx/**',             // Nx
+    '.rush/**',           // Rush
+
+    // Duplicated patterns without ** for backward compatibility
     'node_modules', '.git', '.svn', '.hg', 'build', 'dist', 'out',
     'target', '.vscode', '.idea', '__pycache__', '.pytest_cache',
-    'coverage', '.nyc_output', 'logs', 'tmp', 'temp'
+    'coverage', '.nyc_output', 'logs', 'tmp', 'temp', 'venv', '.venv',
+    'vendor', '.next', '.nuxt', 'bin', 'obj'
 ];
 
 export interface ContextConfig {
